@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.hippoedit.com/xml/package-info">
+<package-info xmlns="http://www.hippoedit.com/xml/package-info" xmlns:smf="http://www.hippoedit.com/">
+	<id>CAD932AC-894A-48F2-BAAD-D270B2B28C51</id>
+	<name>View Editor ToolBar</name>
+	<version>1.1</version>
+	<description>Simple plug-in that extends standard ToolBar by View -> Editor buttons</description>
+	<author>HippoEDIT.com</author>
+	<email>supportbox@hippoedit.com</email>
+	<homepage>http://wiki.hippoedit.com/plugins/view-editor-toolbar</homepage>
+	<memo></memo>
+	<install>
+		<readme type="inline">This will install ViewEditorToolbar plug-in for HippoEDIT.</readme>
+		<require-file name="main.hejs" destination="%{plugins}%/view-editor-toolbar/main.hejs" />
+		<install-plugin path="%{plugins}%/view-editor-toolbar/main.hejs"/>
+	</install>
+	<uninstall>
+		<readme type="inline">This will uninstall View Editor ToolBar plug-in for HippoEDIT.</readme>
+		<uninstall-plugin id="CAD932AC-894A-48F2-BAAD-D270B2B28C51"/>
+		<remove-dir name="%{plugins}%/view-editor-toolbar" />
+	</uninstall>
+</package-info>
