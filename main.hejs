@@ -1,0 +1,25 @@
+Application.AddScriptInfo("CAD932AC-894A-48F2-BAAD-D270B2B28C51", "View Editor ToolBar", "1.1", "Simple plug-in that extends standard toolbar by View -> Editor buttons", "HippoEDIT.com", "supportbox@hippoedit.com", "http://wiki.hippoedit.com/plugins/view-editor-toolbar");
+
+////////////////////////////////////////////////////////////////////////
+// Initialize Scripting Tools Toolbar
+Application.onInitToolbars = function (){
+	var MyToolbar = this.GetToolBar("view-editor", true);
+	MyToolbar.Name = "View Editor";
+
+	// delete old items
+	while ( MyToolbar.ItemCount ) MyToolbar.RemoveButton(0);
+
+	// add new items
+	MyToolbar.AddButton(FindCommand("View.PageWidth"));
+	MyToolbar.AddButton(FindCommand("View.Ruler"));
+	MyToolbar.AddButton(FindCommand("View.IndicatorMargin"));
+	MyToolbar.AddButton(FindCommand("View.LineNumbers"));
+	MyToolbar.AddButton(FindCommand("View.OutliningMargin"));
+	MyToolbar.AddButton(FindCommand("View.IndentationGuides"));
+	MyToolbar.AddButton(FindCommand("View.NestingLevel"));
+	MyToolbar.AddButton(FindCommand("View.AlternatingMode"));
+	MyToolbar.AddButton(null);
+	MyToolbar.AddButton(FindCommand("View.WhiteSpace"));
+	MyToolbar.AddButton(FindCommand("View.WhiteSpaceTrailing"));
+	MyToolbar.AddButton(FindCommand("View.CurrentLine"));
+}
